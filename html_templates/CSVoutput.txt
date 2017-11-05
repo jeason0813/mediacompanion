@@ -1,0 +1,7 @@
+<title>CSV Output</title>
+<<MC HTML Page>>
+"imdbid","title","movieyear","thumb","image","releasedate","format","width","height","createdate","rating","runtime","genre","actors","outline","plot"
+<<media_item>>
+"<<imdb_id>>","<<title>>","<<movieyear>>","<<createimage:175>>","<<createimage:350>>","<<releasedate>>","<<nfo:file:video:container>>","<<nfo:file:video:width>>","<<nfo:file:video:height>>","<<nfo:createdate>>","<<rating>>","<<runtime>>","<<moviegenre>>","<<stars>>","<<outline>>","<<fullplot>>"
+<</media_item>>
+<</MC HTML Page>>

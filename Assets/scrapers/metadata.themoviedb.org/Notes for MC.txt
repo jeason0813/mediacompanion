@@ -1,0 +1,81 @@
+Modification done to tmdb.xml, in metadata.common.themoviedb.org as follows:
+
+Section:	<ParseTMDBWriters dest="5">
+From:
+			<RegExp input="$$7" output="&lt;credits&gt;\1&lt;/credits&gt;" dest="2">
+				<expression repeat="yes" fixchars="1">&quot;department&quot;:&quot;Writing&quot;,&quot;id&quot;:[0-9]*,&quot;job&quot;:&quot;Writer&quot;,&quot;name&quot;:&quot;([^&quot;]*)&quot;</expression>
+			</RegExp>
+To:
+			<RegExp input="$$7" output="&lt;credits&gt;\1&lt;/credits&gt;" dest="2">
+				<expression repeat="yes" fixchars="1">&quot;department&quot;:&quot;Writing&quot;,&quot;id&quot;:[0-9]*,&quot;job&quot;:&quot;[A-Z,a-z]*&quot;,&quot;name&quot;:&quot;([^&quot;]*)&quot;</expression>
+			</RegExp>
+Why:
+We replace 'Writers' with '[A-Z,a-z]*' to get all writers whether Screenplay, Writer or Character.
+
+Section:	<ParseTMDBStudio dest="5">
+From:
+			<RegExp input="$$7" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="2">
+				<expression trim="1" fixchars="1">&quot;name&quot;:&quot;([^&quot;]*)</expression>
+			</RegExp>
+To:
+			<RegExp input="$$7" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="2">
+				<expression repeat="yes" fixchars="1">&quot;name&quot;:&quot;([^&quot;]*)</expression>
+			</RegExp>
+Why:
+Removed 'trim="1"' and replaced with 'repeat="yes"' to get all studio's like we do from IMDB.
+
+Section:	<ParseTMDBCountry dest="5">
+From:
+			<RegExp input="$$7" output="&lt;country&gt;\1&lt;/country&gt;" dest="2">
+				<expression trim="1" fixchars="1">&quot;name&quot;:&quot;([^&quot;]*)</expression>
+			</RegExp>
+To:
+			<RegExp input="$$7" output="&lt;country&gt;\1&lt;/country&gt;" dest="2">
+				<expression repeat="yes" fixchars="1">&quot;name&quot;:&quot;([^&quot;]*)</expression>
+			</RegExp>
+Why:
+Removed 'trim="1"' and replaced with 'repeat="yes"' to get all countries
+
+Addition to get TMDB Set ID
+After Section:		</ParseFallbackTMDBSet>
+Addition:
+	<GetTMDBSetIdByIdChain clearbuffers="no" dest="4">
+		<RegExp input="$$5" output="&lt;details&gt;\1&lt;/details&gt;" dest="4">
+			<RegExp input="$$1" output="\1" dest="8">
+				<expression clear="yes" noclean="1" />
+			</RegExp>
+			<RegExp input="$$8" output="&lt;url function=&quot;ParseTMDBSetId&quot; cache=&quot;tmdb-$INFO[language]-\1.json&quot;&gt;http://api.tmdb.org/3/movie/\1?api_key=f7f51775877e0bb6703520952b3c7840&amp;amp;language=$INFO[language]&lt;/url&gt;" dest="5">
+				<expression />
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</GetTMDBSetIdByIdChain>
+	<ParseTMDBSetId dest="5">
+		<RegExp input="$$2" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
+			<RegExp input="$$1" output="\1" dest="9">
+				<expression clear="yes" noclean="1">&quot;belongs_to_collection&quot;:\{&quot;id&quot;:([0-9]+),&quot;name&quot;</expression>
+			</RegExp>
+			<RegExp input="$$9" output="&lt;url function=&quot;ParseFallbackTMDBSetId&quot; cache=&quot;tmdb-en-$$8.json&quot;&gt;http://api.tmdb.org/3/movie/$$8?api_key=f7f51775877e0bb6703520952b3c7840&amp;amp;language=en&lt;/url&gt;" dest="2">
+				<expression>^$</expression>
+			</RegExp>
+			<RegExp input="$$9" output="&lt;setid&gt;\1&lt;/setid&gt;" dest="2">
+				<expression>(.+)</expression>
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</ParseTMDBSetId>
+	<ParseFallbackTMDBSetId dest="5">
+		<RegExp input="$$2" output="&lt;details&gt;\1&lt;/details&gt;" dest="5">
+			<RegExp input="$$1" output="&lt;setid&gt;\1&lt;/setid&gt;" dest="2">
+				<expression noclean="1">&quot;belongs_to_collection&quot;:\{&quot;id&quot;:([0-9]+),&quot;name&quot;</expression>
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</ParseFallbackTMDBSetId>
+Also in tmdb.xml in folder metadata.themoviedb.org
+After Section:	<RegExp input="$$2" output="&lt;chain function=&quot;GetTMDBSetByIdChain&quot;&gt;$$2&lt;/chain&gt;" dest="5+">
+Addition:
+			<RegExp input="$$2" output="&lt;chain function=&quot;GetTMDBSetIdByIdChain&quot;&gt;$$2&lt;/chain&gt;" dest="5+">
+				<expression />
+			</RegExp>
+

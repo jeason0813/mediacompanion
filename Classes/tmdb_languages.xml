@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	In the 'language' tags listed below, the 'value' attribute is a comma separated list of language codes, listed in preferred language order.
+
+	Information on language codes can be found in these links:
+
+		http://api.themoviedb.org/2.1/language-tags
+		http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+		http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+
+	You can specify any number of language codes, but the results are limited to what's available on TMDb and not all languages are well populated.
+
+	You can see what's available for a given movie by searching for it from here:
+
+		http://www.themoviedb.org/movie
+	
+
+ 	Special values
+	==============
+
+	Value			Meaning
+	=====			=======
+	"no language"  		Language neutral, e.g. a backdrop (aka fanart) image with no writing
+
+	"language not set"	No language has been specified on the item in question e.g. a poster. 
+								These items are likely to be in English, though no guarentee.
+
+
+	Custom definition
+	=================
+	If you need to add another language, please do so from Media Companion, as although adding to the list below will work, your changes will be lost when you next upgrade.
+
+	Example
+	=======
+	If your native language is Spanish, but you are fluent in Italian, then you might add a custom definition like this in Media Companion:
+
+		Name  : Spanish\Italian
+		Value : es,it,no language,en,language not set
+
+
+	Missing your language?
+	======================
+	To get another language added to the list below, please create a new issue here:
+
+		https://sourceforge.net/p/mediacompanion/tickets/
+
+	In the description, include the language name & value. E.g.
+
+		Name  : Greek
+		Value : el,it,no language,en,language not set
+ 	
+-->
+<tmdb>
+	<languages>
+		<language name="Arabic"              value="ar,no language,en,language not set"/>
+		<language name="Czech"               value="cs,no language,en,language not set"/>
+		<language name="Danish"              value="da,no language,en,language not set"/>
+		<language name="Dutch"               value="nl,no language,en,language not set"/>
+		<language name="English - British"   value="en-GB,en,no language,language not set" />
+		<language name="English - US"        value=      "en,no language,language not set" />
+		<language name="French"              value="fr,no language,en,language not set"/>
+		<language name="German"              value="de,no language,en,language not set"/>
+		<language name="Hindi"               value="hi,no language,en,language not set"/>
+		<language name="Hungarian"           value="hu,no language,en,language not set"/>
+		<language name="Hebrew"              value="he,no language,en,language not set"/>
+		<language name="Italian"             value="it,no language,en,language not set"/>
+		<language name="Japanese"            value="ja,no language,en,language not set"/>
+		<language name="Korean"              value="ko,no language,en,language not set"/>
+		<language name="Norwegian"           value="nb,no language,en,language not set"/>
+		<language name="Polish"              value="pl,no language,en,language not set"/>
+		<language name="Portuguese,Spanish"  value="pt,es,no language,en,language not set"/>
+		<language name="Romanian"            value="ro,no language,en,language not set"/>
+		<language name="Russian"             value="ru,no language,en,language not set"/>
+		<language name="Spanish"             value="es,no language,en,language not set"/>
+		<language name="Swedish"             value="sv,no language,en,language not set"/>
+		<language name="Thai"                value="th,no language,en,language not set"/>
+	</languages>
+</tmdb>

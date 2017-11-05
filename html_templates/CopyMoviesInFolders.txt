@@ -1,0 +1,13 @@
+<title>Copy Movies In Folders</title>
+<!--
+NOTE: This template will copy movies stored in separate folders to the Z:
+      You will need to map your destination drive to Z:
+-->
+<<MC HTML Page>>
+<<media_item>>xcopy "<<folder>>\*.*" "Z:<<folder_no_drive>>\*.*"
+if errorlevel 1 exit
+<</media_item>>
+<</MC HTML Page>>
+<<filename>>CopyMoviesInFolders.cmd<</filename>>
+<<textencoding>>ASCII<</textencoding>>
+

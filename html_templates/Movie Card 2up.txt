@@ -1,0 +1,88 @@
+<title>Movie Card 2up</title>
+<<MC HTML Page>>
+<<header>>
+<meta  content="text/html;  charset=UTF-8"  http-equiv="Content-Type">
+<link href="moviecard2up.css" rel="stylesheet" type="text/css">
+<title>Movie List - <<moviecount>> titles</title>
+<!--
+NOTE: This template has a Stars category that may need batch re-scraping.
+      Sometimes an image whose aspect ratio is less than 75% may cause an anomaly - use
+      the crop tool to fix any issues.
+-->
+<</header>>
+<<body>>
+<table align="center" border="0" width="800" bgcolor="#ffffff" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+<<media_item>>
+			<div>
+				<table align="center" valign="center" border="0" width="99%" cellspacing="1" cellpadding="1">
+					<tr >
+						<td align="left" colspan ="2" width="100%" bgcolor="#000000">
+							<font color="#ffffff" class="headingfont" ><b>&nbsp;<a href="<<imdb_url>>"><<nfo:title:47>> (<<movieyear>>)</a></b></font>
+						</td>
+					</tr>
+					<tr>
+						<td width="135"><img src="<<createimage:175>>" height="175" border="1"></td>
+						<td >
+							<table align="left" border="0" width="255px">
+								<tr class="bigfont" height="30">
+									<td><b>Stars:</b></td><td colspan="2"><font class="smallfont"><<stars>></font></td>
+								</tr>
+								<tr class="bigfont" height="17">
+									<td><b>Genre:</b></td><td colspan="2"><font class="smallfont"><<nfo:genre:37>></font></td>
+								</tr>
+								<tr class="bigfont" height="100">
+									<td colspan="3"><b>Outline: </b><font class="smallfont"> <<nfo:outline:300>></font></td>
+								</tr>
+								<tr class="bigfont" height="17">
+									<td width="18%"><b><<rating>></b><font color="#aaaaaa"> /10</font></td>
+									<td width="60%"><b>Cert:</b> <<nfo:mpaa:15>></td>
+									<td align="right" width="22%"><<runtime>></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+<</media_item>>
+		</td>
+	</tr>
+</table>
+<</body>>
+<<footer>><</footer>>
+<</MC HTML Page>>
+
+<<css>>
+<filename>moviecard2up.css</filename>
+@charset "utf-8";
+.smallfont {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+}
+.bigfont {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 12px;
+}
+.headingfont {
+   font-size: 16px;
+}
+.dim {
+	color: #aaaaaa;
+}
+div {
+	float: left;
+	height: 205px;
+	width: 398px;
+	border: 1px solid #e0e0e0;
+	background-color: #f0f0f0;
+}
+tr {
+	vertical-align: top;
+}
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+a:hover { color: #e0e0e0; }
+<</css>>

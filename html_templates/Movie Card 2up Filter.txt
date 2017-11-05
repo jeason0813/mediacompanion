@@ -1,0 +1,197 @@
+<title>Movie Card Filter</title>
+<<MC HTML Page>>
+<<header>>
+<meta  content="text/html;  charset=UTF-8"  http-equiv="Content-Type">
+<link href="moviecard2up.css" rel="stylesheet" type="text/css">
+<title>Movie List - <<moviecount>> titles</title>
+<script type="text/javascript">
+var currTitleFilter = currGenreFilter = "All";
+function showGenre( disp ) {
+	var elemDiv = document.getElementsByTagName( "div" );
+	for(var i = 0; i < ( elemDiv.length ); i++){
+		if( disp == "All" ) {
+			elemDiv[i].style.display="block";
+		} else {
+			var div_id = elemDiv[i].id.substring(6);
+			var getMovieGenre = document.getElementById("genre_" + div_id ).innerHTML;
+			if( getMovieGenre.search(disp) != -1 ) {
+				elemDiv[i].style.display="block";
+			}else{
+				elemDiv[i].style.display="none";
+			}
+		}
+	}
+	currGenreFilter = disp;
+}
+
+function showTitle( disp ) {
+	var elemDiv = document.getElementsByTagName( "div" );
+	for(var i = 0; i < ( elemDiv.length ); i++){
+		if( disp == "All" ) {
+			elemDiv[i].style.display="block";
+		} else {
+			var div_id = elemDiv[i].id.substring(6);
+			var getMovieTitle = document.getElementById("title_" + div_id ).innerHTML;
+			if( getMovieTitle.indexOf('The ') == 0 ) getMovieTitle = getMovieTitle.substring(4);
+			if( disp == "Digit" && ( getMovieTitle[0]>= 0 || getMovieTitle[0] <= 9 ) || getMovieTitle[0] == disp ) {
+				elemDiv[i].style.display="block";
+			}else{
+				elemDiv[i].style.display="none";
+			}
+		}
+	}
+	currTitleFilter = disp;
+}
+</script>
+<!--
+NOTE: This template has a Stars category that may need batch re-scraping.
+      Sometimes an image whose aspect ratio is less than 75% may cause an anomaly - use
+      the crop tool to fix any issues.
+-->
+<</header>>
+<<body>>
+<table align="center" border="0" width="800" bgcolor="#ffffff" cellspacing="0" cellpadding="0">
+	<tr bgcolor="#f0f0f0" >
+		<td class="filterTitle" align="center">
+			<a onclick="showTitle('All')"> &nbsp;All&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+			<a onclick="showTitle('Digit')"> &nbsp;0-9&nbsp;&nbsp; </a>
+			<a onclick="showTitle('A')"> &nbsp;A&nbsp; </a>
+			<a onclick="showTitle('B')"> &nbsp;B&nbsp; </a>
+			<a onclick="showTitle('C')"> &nbsp;C&nbsp; </a>
+			<a onclick="showTitle('D')"> &nbsp;D&nbsp; </a>
+			<a onclick="showTitle('E')"> &nbsp;E&nbsp; </a>
+			<a onclick="showTitle('F')"> &nbsp;F&nbsp; </a>
+			<a onclick="showTitle('G')"> &nbsp;G&nbsp; </a>
+			<a onclick="showTitle('H')"> &nbsp;H&nbsp; </a>
+			<a onclick="showTitle('I')"> &nbsp;I&nbsp; </a>
+			<a onclick="showTitle('J')"> &nbsp;J&nbsp; </a>
+			<a onclick="showTitle('K')"> &nbsp;K&nbsp; </a>
+			<a onclick="showTitle('L')"> &nbsp;L&nbsp; </a>
+			<a onclick="showTitle('M')"> &nbsp;M&nbsp; </a>
+			<a onclick="showTitle('N')"> &nbsp;N&nbsp; </a>
+			<a onclick="showTitle('O')"> &nbsp;O&nbsp; </a>
+			<a onclick="showTitle('P')"> &nbsp;P&nbsp; </a>
+			<a onclick="showTitle('Q')"> &nbsp;Q&nbsp; </a>
+			<a onclick="showTitle('R')"> &nbsp;R&nbsp; </a>
+			<a onclick="showTitle('S')"> &nbsp;S&nbsp; </a>
+			<a onclick="showTitle('T')"> &nbsp;T&nbsp; </a>
+			<a onclick="showTitle('U')"> &nbsp;U&nbsp; </a>
+			<a onclick="showTitle('V')"> &nbsp;V&nbsp; </a>
+			<a onclick="showTitle('W')"> &nbsp;W&nbsp; </a>
+			<a onclick="showTitle('X')"> &nbsp;X&nbsp; </a>
+			<a onclick="showTitle('Y')"> &nbsp;Y&nbsp; </a>
+			<a onclick="showTitle('Z')"> &nbsp;Z&nbsp; </a>
+		</td>
+	</tr>
+	<tr bgcolor="#f0f0f0" >
+		<td class="filterGenre" align="center">
+			<a onclick="showGenre('Action')"> &nbsp;Action&nbsp; </a>
+			<a onclick="showGenre('Adventure')"> Adventure&nbsp; </a>
+			<a onclick="showGenre('Animation')"> Animation&nbsp; </a>
+			<a onclick="showGenre('Biography')"> Biography&nbsp; </a>
+			<a onclick="showGenre('Comedy')"> Comedy&nbsp; </a>
+			<a onclick="showGenre('Crime')"> Crime&nbsp; </a>
+			<a onclick="showGenre('Documentary')"> Documentary&nbsp; </a>
+			<a onclick="showGenre('Drama')"> Drama&nbsp; </a>
+			<a onclick="showGenre('Family')"> Family&nbsp; </a>
+			<a onclick="showGenre('Fantasy')"> Fantasy&nbsp; </a>
+			<a onclick="showGenre('Film Noir')"> Film Noir&nbsp; </a>
+			<a onclick="showGenre('Horror')"> Horror&nbsp; </a>
+			<a onclick="showGenre('Music ')"> Music&nbsp; </a><!-- Note space after 'Music' to differentiate from 'Musical' - same for Genre token below -->
+			<a onclick="showGenre('Musical')"> Musical&nbsp; </a>
+			<a onclick="showGenre('Mystery')"> Mystery&nbsp; </a>
+			<a onclick="showGenre('Romance')"> Romance&nbsp; </a>
+			<a onclick="showGenre('Sci-Fi')"> Sci-Fi&nbsp; </a>
+			<a onclick="showGenre('Short')"> Short&nbsp; </a>
+			<a onclick="showGenre('Sport')"> Sport&nbsp; </a>
+			<a onclick="showGenre('Thriller')"> Thriller&nbsp; </a>
+			<a onclick="showGenre('War')"> War&nbsp; </a>
+			<a onclick="showGenre('Western')"> Western&nbsp; </a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+<<media_item>>
+			<div id="movie_<<counter>>">
+				<table align="center" valign="center" border="0" width="99%" cellspacing="1" cellpadding="1">
+					<tr>
+						<td align="left" colspan ="2" width="100%" bgcolor="#000000">
+							<font color="#ffffff" class="headingfont" ><b>&nbsp;<a href="<<imdb_url>>"><span id="title_<<counter>>"><<nfo:title:47>></span> (<<movieyear>>)</a></b></font>
+						</td>
+					</tr>
+					<tr>
+						<td width="135"><img src="<<createimage:175>>" height="175" border="1"></td>
+						<td >
+							<table class="smallfont" align="left" border="0" width="255px">
+								<tr height="30">
+									<td><b>Stars:</b></td><td colspan="2"><span id="stars_<<counter>>"> <<stars>></span></td>
+								</tr>
+								<tr height="30">
+									<td><b>Genre:</b></td><td colspan="2"><span id="genre_<<counter>>"> <<nfo:genre:75>> </span></td>
+								</tr>
+								<tr height="90">
+									<td colspan="3"><b>Outline: </b><span id="outline_<<counter>>"> <<nfo:outline:270>></span></td>
+								</tr>
+								<tr height="15">
+									<td width="18%"><b><<rating>></b><font color="#aaaaaa"> /10</font></td>
+									<td width="60%"><b>Cert:</b> <<nfo:mpaa:15>></td>
+									<td align="right" width="22%"><<runtime>></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
+<</media_item>>
+		</td>
+	</tr>
+</table>
+<</body>>
+<<footer>><</footer>>
+<</MC HTML Page>>
+
+<<css>>
+<filename>moviecard2up.css</filename>
+@charset "utf-8";
+.smallfont {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+}
+.bigfont {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 12px;
+}
+.headingfont {
+   font-size: 16px;
+}
+.dim {
+	color: #aaaaaa;
+}
+.filterTitle > a {
+	color: #aaaaaa;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+.filterGenre > a {
+	color: #aaaaaa;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 8px;
+}
+div {
+	float: left;
+	height: 205px;
+	width: 398px;
+	border: 1px solid #e0e0e0;
+	background-color: #f0f0f0;
+}
+tr {
+	vertical-align: top;
+}
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+a:hover { color: #e0e0e0; }
+<</css>>

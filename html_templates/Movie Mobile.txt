@@ -1,0 +1,61 @@
+<menutitle>Movie Mobile</menutitle>
+<<MC HTML Page>>
+<<header>>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<title>Movie List - <<moviecount>> titles</title>
+<!-- optimized for mobile, zoom/scaling disabled -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<!-- status bar styles: default, black, or black-translucent -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<!-- hides browser chrome -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- home screen title -->
+<meta name="apple-mobile-web-app-title" content="Movie List"/>
+<!-- home screen icon -->
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<</header>>
+<<body>>
+	<div align="center">
+		<ul>
+<<media_item>>
+			<li>
+				<table>
+					<tr>
+						<td valign="top">
+							<img src="<<createimage:175>>" height="175">
+						</td>
+						<td valign="top">
+							<font size="5"><b><<title>></b></font>
+							<br><br>
+							<b>Stars:</b> <<stars>>
+							<br>
+							<b>Genre:</b> <<moviegenre>>
+						</td>
+					</tr>
+				</table>
+			</li>
+<</media_item>>
+		</ul>
+	</div>
+
+	<style>
+	body {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	ul {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	li {
+        	width: 320px;
+        	border: 0px solid #000;
+        	display: inline-block;
+		vertical-align: top;
+        	margin-left: 0px;
+        	margin-right: 0px;
+	}
+	</style>
+<</body>>
+<<footer>><</footer>>
+<</MC HTML Page>>

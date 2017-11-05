@@ -1,0 +1,51 @@
+Action
+Adventure
+Animation
+Biography
+Children
+Comedy
+Crime
+Disaster
+Documentary
+Drama
+Eastern
+Erotic
+Family
+Fan Film
+Fantasy
+Film
+Film Noir
+Food
+Foreign
+Game Show
+History
+Holiday
+Home and Garden
+Horror
+Indie
+Mini-Series
+Music
+Musical
+Mystery
+Neo-noir
+News
+Reality
+Road Movie
+Romance
+Science
+Science Fiction
+Science-Fiction
+Sci-Fi
+Short
+Soap
+Special Interest
+Sport
+Sporting Event
+Sports
+Sports Film
+Suspense
+Talk Show
+Thriller
+Travel
+TV Movie
+Western

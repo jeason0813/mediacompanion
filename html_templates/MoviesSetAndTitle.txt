@@ -1,0 +1,8 @@
+<title>Movie Set && Title</title>
+<<MC HTML Page>>
+Movie set,Title,Release date
+<<media_item>><<movieset>>,<<title>>,<<release_date>>
+<</media_item>>
+<</MC HTML Page>>
+<<filename>>MovieSetAndTitle.csv<</filename>>
+<<textencoding>>ASCII<</textencoding>>

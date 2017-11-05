@@ -1,0 +1,142 @@
+***************************************
+GENERAL TAGS
+***************************************
+<<filename>>		Default output filename. E.g. usage: <<filename>>CopyMoviesInFolders.cmd<</filename>>
+<<textencoding>>	Change the text encoding. Default is UTF8. Only ASCII alternative supported. E.g. usage: <<textencoding>>ASCII<</textencoding>>
+
+
+***************************************
+MOVIE TAGS
+***************************************
+<<media_item[:limit]>>
+<<smallimage>>
+<<createimage[:sizelimit][:nopath]>>
+<<moviecount>>
+<<counter>>
+<<imdb_id>>
+<<imdb_num>>			Same as imdb_id, but without the "tt" prefix
+<<imdb_url>>
+<<title[:none|append|article]>>
+<<movieyear>>
+<<movietitleandyear>>
+<<rating>>
+<<runtime>>
+<<outline>>
+<<fullpathandfilename>>
+<<fullplot>>
+<<director>>
+<<stars>>
+<<actors[:name][:role][:thumb][:limit]>>
+<<writer>>
+<<moviegenre>>
+<<releasedate>>
+<<file_size>>			Size of specific video file.  May cause issue if DVD/BluRay folder structure.
+<<folder_size>>			Size of the containing movie folder
+<<filename[:root][:path][:file][:ext]>>
+<<format[:container][:source][:resolution]>>
+<<nfo:[nfo parameter][:char_limit]>>
+<<nfo:createdate[:dateformat][:separator]>>
+Special Parameters:
+    [sizelimit]     -   Integer. Defines the height of the movie poster. Maintains aspect ratio.
+                        A zero(0) will keep the images original size.
+    [nfo parameter] -   Any tag specified in the movie NFO file. File parameters accessed by
+                        cascading tags e.g. <<nfo:file:video:container>>
+    [char_limit]    -   Integer. Limit the number of characters displayed, followed by a pseudo-ellipses.
+                        Available for all NFO parameters except file parameters.
+<<folder>>					Movie folder inc drive and path.         - See CopyMoviesInFolders.txt for example usage
+<<folder_no_drive>>		Movie folder ex  drive, including path   - See CopyMoviesInFolders.txt for example usage
+
+
+
+***************************************
+TV TAGS
+***************************************
+<<media_item>>
+<<season[:missing|all]>>
+<<episode[:missing|all]>>
+Special Parameters:
+    [:missing|all]  -   If no extra instruction, will only output media present in MC.
+                        'Missing' will only output missing media (must have scraped missing episodes).
+                        'All' will output both present media and missing (if scraped) media.
+
+SHOW TAGS
+<<createimage[:sizelimit][:imagetype]>>
+<<show_title>>
+<<show_year>>
+<<show_titleandyear>>
+<<show_imdbid>>
+<<show_imdburl>>
+<<show_tvdbid>>
+<<show_tvdburl>>
+<<show_genre>>
+<<show_episodeactorsource>>
+<<show_language>>
+<<show_locked>>
+<<show_rating>>
+<<show_sortorder>>
+<<show_status>>
+<<show_count>>
+<<show_counter>>
+<<show_seasons[:text]>>
+<<class:[row|classname]>>
+<<show_nfo:[nfo parameter][:char_limit]>>
+Special Parameters:
+    [sizelimit]     -   Integer. Defines the height of a poster, or the width of a banner.
+                        Maintains aspect ratio. A zero(0) will retain the image's original size.
+    [imagetype]     -   Can be either 'poster' or 'banner'. The aspect ratio is checked, and the default
+                        image is substituted if needed. If not included, defaults to 'poster'.
+    [text]          -   Intelligently adds the word 'Season' or 'Seasons' if number is one(1) or other.
+    [classname]     -   Adds text in the form of " class=[classname]" for CSS.
+                        If 'row' is specified, adds text in the form of " class=show_row_[odd|even}".
+    [nfo parameter] -   Any tag specified in the TV show NFO file. (<url> not required for <episodeguide>
+                        tag.)
+    [char_limit]    -   Integer. Limit the number of characters displayed, followed by a pseudo-ellipses.
+                        Available for all NFO parameters except <episodeguide>.
+
+SEASON TAGS
+<<createimage:[sizelimit]:[imagetype]>>
+<<show_counter>>
+<<seas_number[:text|pad]>>
+<<seas_episodes[:text|pad]>>
+<<seas_episodesof[:text]>>
+<<class:[row|missing|missingepisode|classname]>>
+Special Parameters:
+    [sizelimit]     -   Integer. Defines the height of a poster, or the width of a banner.
+                        Maintains aspect ratio. A zero(0) will retain the image's original size.
+    [imagetype]     -   Can be either 'poster' or 'banner'. The aspect ratio is checked, and the default
+                        image is substituted if needed. If not included, defaults to 'poster'.
+    [text]          -   Adds the word 'Season' or 'Episode', and the plural if number is not one(1).
+    [pad]           -   Pads a single digit number with a leading zero(0).
+    [classname]     -   If 'row' is specified, adds text in the form of " class=show_row_[odd|even]".
+                        If class name contains 'missing', returns " class=[classname]" if the season does
+                        not exist, and have scraped missing episodes.
+                        The parameter 'missingepisode' is a special case where if there are any missing
+                        episodes in that season, " class=missingseason" is returned. (Must have a
+                        'missingseason' CSS class for this to have any affect.)
+                        Adds text in the form of " class=[classname]" for CSS.
+
+EPISODE TAGS
+<<show_counter>>
+<<ep_title>>
+<<ep_season:[pad]>>
+<<ep_number:[pad]>>
+<<ep_rating>>
+<<ep_playcount>>
+<<ep_imdbid>>
+<<ep_imdburl>>
+<<ep_tvdbid>>
+<<class:[row|missing|classname]>>
+<<ep_nfo:[nfo parameter][:char_limit]>>
+Special Parameters:
+    [pad]           -   Pads a single digit number with a leading zero(0).
+    [classname]     -   If 'row' is specified, adds text in the form of " class=show_row_[odd|even]".
+                        If class name contains 'missing', returns " class=[classname]" if the season does
+                        not exist, and have scraped missing episodes.
+                        Adds text in the form of " class=[classname]" for CSS.
+    [nfo parameter] -   Any tag specified in the TV show NFO file. File parameters accessed by
+                        cascading tags e.g. <<ep_nfo:file:video:container>>.
+    [char_limit]    -   Integer. Limit the number of characters displayed, followed by a pseudo-ellipses.
+                        Available for all NFO parameters except file parameters.
+
+
+NOTE: any NFO parameter that is a list will be ignored at this stage. May be included in future versions.

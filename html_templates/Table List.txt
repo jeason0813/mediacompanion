@@ -1,0 +1,30 @@
+<title>Table List - No Plot</title>
+<<MC HTML Page>>
+<<header>>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<h1 align="center"><font size="6"><b>Media Companion for XBMC\Kodi</b></font></h1>
+<h2 align="center"><font size="5"><b>Table List - No Plot</b></font></h2>
+<h3 align="center"><<moviecount>> movies</h3>
+<p align="center">&nbsp;</p>
+<table width="100%" border="0">
+<tr>
+<td width="50%"><b>Titles</b></td>
+<td width="10%"><b>Year</b></td>
+<td width="10%"><b>Rating</b></td>
+<td width="30%"><b>Runtime</b></td>
+</tr>
+</table>
+<</header>>
+<<body>>
+<table width="100%" border="2">
+<tr>
+<td width="50%"> <p align="left"><b><a href="<<imdb_url>>"><<title>></a></b></p></td>
+<td width="10%"> <<movieyear>></td>
+<td width="10%"> <<rating>></td>
+<td width="30%"> <<runtime>></td>
+</tr>
+</table>
+<</body>>
+<<footer>><</footer>>
+<</MC HTML Page>>
+

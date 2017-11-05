@@ -1,0 +1,136 @@
+<title>Advanced Show Display</title>
+<<MC TV HTML Page>>
+<<header>>
+<meta  content="text/html;  charset=UTF-8"  http-equiv="Content-Type">
+<link href="tvlistadv.css" rel="stylesheet" type="text/css">
+<title>TV Show Display - <<show_count>> Shows</title>
+<script type="text/javascript">
+function showDetails( disp, div_id ) {
+	var i = 0;
+	var showCount = <<show_count>>;
+	var elemDiv = disp.nextSibling.nextSibling;
+	if( elemDiv.style.display == "none" ) {
+		for(i = 0; i < showCount; i++){
+			var getTVShow = document.getElementById("tvshow_" + i );
+			if( i != div_id && getTVShow !== null ) getTVShow.style.display = "none";
+		}
+		elemDiv.style.display = "block";
+	}else{
+		elemDiv.style.display = "none";
+		for(i = 0; i < showCount; i++){
+			var getTVShow = document.getElementById("tvshow_" + i );
+			if( getTVShow !== null ) getTVShow.style.display = "block";
+		}
+		document.getElementById("tvshow_" + div_id ).scrollIntoView();
+	}
+}
+
+function showSeason( showId, seasId ) {
+	var elemDiv = document.getElementById("season_" + showId + "_" + seasId );
+	if( elemDiv.style.display == "none" ) {
+		elemDiv.style.display = "block";
+	}else{
+		elemDiv.style.display = "none";
+	}
+}
+
+</script>
+<!--
+NOTE: This template relies on the banner image for each show, otherwise the default banner
+      image is displayed - both folder.jpg and seasons-all.tbn are checked.
+      The default display is collapsed. This can be altered to suit by changing the DIV styles
+      from style="display: none" to style="display: block".
+-->
+<</header>>
+<<body>>
+<table align="center" border="0" width="800" bgcolor="#ffffff" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+<<media_item>>
+			<div id="tvshow_<<show_counter>>" align="center">
+				<img src="<<createimage:0:banner>>" border="0" onclick="showDetails(this, <<show_counter>>);">
+				<div id="season_<<show_counter>>" style="display: none">
+				<table width="758px"><tr><td class="showlinks" align="right"><a href="<<show_imdburl>>">IMDB</a> <a href="<<show_tvdburl>>">TheTVDB</a></td></tr></table>
+<<season:all>>
+					<table align="center" valign="center" border="0" width="758" cellspacing="1" cellpadding="1">
+						<tr>
+							<td rowspan="2" width="75"><img src="<<createimage:100>>" height="100" border="0" onclick="showSeason(<<show_counter>>,<<seas_number>>);"></td>
+							<td valign="bottom"><span<<class:missingepisode>> onclick="showSeason(<<show_counter>>,<<seas_number>>);"><font class=headingfont>Season <<seas_number:specials>></font></span></td>
+							<td align="right" valign="bottom"><span class=smallfont><<seas_episodesof:text>></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<div id="season_<<show_counter>>_<<seas_number>>" style="display: none">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<<episode:all>>
+										<tr<<class:row>>>
+											<td><a href="<<ep_imdburl>>" title="<<ep_nfo:plot>>"><span<<class:missingepisode>>><<ep_number:pad>>. <<ep_title>></span></a></td>
+											<td width="50px" align="right" class=smallfont><<ep_rating>></td>
+										</tr>
+<</episode>>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tr><td colspan="3"><hr></td></tr>
+					</table>
+<</season>>
+				</div>
+			</div>
+<</media_item>>
+		</td>
+	</tr>
+</table>
+<</body>>
+<<footer>><</footer>>
+<</MC TV HTML Page>>
+
+<<css>>
+<filename>tvlistadv.css</filename>
+@charset "utf-8";
+.showlinks {
+	font-size: 10px;
+	color: #aaaaaa;
+}
+.showlinks > a {
+	color: #aaaaaa;
+}
+.smallfont {
+	font-size: 11px;
+}
+.bigfont {
+	font-size: 12px;
+}
+.headingfont {
+	font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif;
+	font-size: 48px;
+	font-weight: bold;
+}
+.dim {
+	color: #aaaaaa;
+}
+.missingseason {
+	color: #666666;
+}
+.missingepisode {
+	color: #888888;
+}
+.ep_row_odd {
+	background-color: #ffffff;
+}
+.ep_row_even {
+	background-color: #f5f5ff;
+}
+body {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+tr {
+	vertical-align: top;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover { color: #222222; }
+<</css>>

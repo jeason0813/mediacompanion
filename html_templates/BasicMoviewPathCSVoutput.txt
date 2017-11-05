@@ -1,0 +1,6 @@
+<title>Basic Movie with Path && Filename as CSV</title>
+<<MC HTML Page>>
+"Movie Title and Year","Full Path & Filename."
+<<media_item>>
+<<movietitleandyear>>,<<filename>><</media_item>>
+<</MC HTML Page>>

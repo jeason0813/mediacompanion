@@ -1,0 +1,19 @@
+<title>Missing Episode List</title>
+<<MC TV HTML Page>>
+<<header>>
+<meta  content="text/html;  charset=UTF-8"  http-equiv="Content-Type">
+<title>Missing Episode List</title>
+<</header>>
+<<body>>
+<table border="0">
+	<tr valign="top">
+		<td><<show_title>>:</td>
+		<td>
+<<episode:missing>>s<<ep_season:pad>>e<<ep_number:pad>>. <<ep_title>></br>
+<</episode>>
+		</td>
+	</tr>
+</table>
+<</body>>
+<<footer>><</footer>>
+<</MC TV HTML Page>>

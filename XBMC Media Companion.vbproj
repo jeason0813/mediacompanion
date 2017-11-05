@@ -1,0 +1,1602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A891BFA-D799-4F3A-AFBA-A53C4824F33C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Media_Companion.My.MyApplication</StartupObject>
+    <RootNamespace>Media_Companion</RootNamespace>
+    <AssemblyName>Media Companion</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\MediaCompanion.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>C:\_test publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>3.6.8.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1179C7EB15DCB2E8C80EA8E148233A34D2BC75F9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>XBMC Media Companion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>None</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaFS, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4d31a58f7d7ad5c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assets\AlphaFS.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\log4net.2.0.0\lib\net40-client\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.StateMachineToolkit">
+      <HintPath>packages\StateMachineToolkit.6.5.0.0\lib\net40\Sanford.StateMachineToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.87.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\System.Data.SQLite.1.0.87.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.87.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\System.Data.SQLite.1.0.87.0\lib\net40\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="wfcl_MC">
+      <HintPath>Assets\wfcl_MC.dll</HintPath>
+    </Reference>
+    <Reference Include="XBMCJsonRpcSharp, Version=0.1.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assets\XBMCJsonRpcSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Alphaleonis.Win32.Filesystem" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Basics\TaskingSupport.vb" />
+    <Compile Include="Classes\LockSpecificParams.vb" />
+    <Compile Include="Classes\HmMovComboList.vb" />
+    <Compile Include="Classes\TVDB.vb" />
+    <Compile Include="Classes\TVTMDb.vb" />
+    <Compile Include="Classes\TmdbCustomSetName.vb" />
+    <Compile Include="Classes\UserTmdbSetAdditions.vb" />
+    <Compile Include="Classes\TmdbSetMissingMovie.vb" />
+    <Compile Include="Classes\MovieSetInfo.vb" />
+    <Compile Include="Classes\Databases.vb" />
+    <Compile Include="Classes\CertificateMappings.vb" />
+    <Compile Include="Classes\ComboList.vb" />
+    <Compile Include="Classes\NotifyTaskbar.vb" />
+    <Compile Include="Classes\xbmcExport.vb" />
+    <Compile Include="Classes\FanartTvList.vb" />
+    <Compile Include="Classes\MVComboList.vb" />
+    <Compile Include="Classes\PriorityQueue.vb" />
+    <Compile Include="Classes\FanartTv.vb" />
+    <Compile Include="Classes\TvdbArgs.vb" />
+    <Compile Include="Classes\UserRect.vb" />
+    <Compile Include="Classes\WikipediaMusivVideoScraper.vb" />
+    <Compile Include="Classes\XBMC_Link\BaseEvent.vb" />
+    <Compile Include="Classes\XBMC_Link\BaseEventArgs.vb" />
+    <Compile Include="Classes\XBMC_Link\DictItem.vb" />
+    <Compile Include="Classes\XBMC_Link\ScanNewMoviesEventArgs.vb" />
+    <Compile Include="Classes\XBMC_Link\XbmcController.Functions.vb" />
+    <Compile Include="Classes\XBMC_Link\XBMC_Movies_EventArgs.vb" />
+    <Compile Include="Classes\XBMC_Link\FolderEventArgs.vb" />
+    <Compile Include="Classes\XBMC_Link\VideoPathEventArgs.vb" />
+    <Compile Include="Classes\XBMC_Link\smAction.vb" />
+    <Compile Include="Classes\XBMC_Link\XBMC_Controller_Progress.vb" />
+    <Compile Include="Classes\XBMC_Link\UnknownEventArgs.vb" />
+    <Compile Include="Classes\XBMC_Link\XbmcController.vb" />
+    <Compile Include="Classes\XBMC_Link\XbmcJson.vb" />
+    <Compile Include="Classes\FilteredItems.vb" />
+    <Compile Include="Classes\NewVersionCheckResult.vb" />
+    <Compile Include="Classes\MovieProgress.vb" />
+    <Compile Include="Classes\FrodoFanartThumb.vb" />
+    <Compile Include="Classes\MainForm\clsGridViewMovie.vb" />
+    <Compile Include="Classes\MainForm\Data_GridViewMovie.vb" />
+    <Compile Include="Classes\ExceptionHandler.vb" />
+    <Compile Include="Classes\HomeMovieDetails.vb" />
+    <Compile Include="Classes\HomeMovies.vb" />
+    <Compile Include="Classes\MainForm\clsCompareFileInfo.vb" />
+    <Compile Include="Classes\MediaInfoExport.vb" />
+    <Compile Include="Classes\Movie.vb" />
+    <Compile Include="Classes\Movies.vb" />
+    <Compile Include="Classes\Progress.vb" />
+    <Compile Include="Classes\Renamer.vb" />
+    <Compile Include="Classes\RescrapeList.vb" />
+    <Compile Include="Classes\RescrapeSpecificParams.vb" />
+    <Compile Include="Classes\RetryHandler.vb" />
+    <Compile Include="Classes\Thumb.vb" />
+    <Compile Include="Classes\Times.vb" />
+    <Compile Include="Classes\TMDb.vb" />
+    <Compile Include="Classes\TvdbScraper.vb" />
+    <Compile Include="Classes\TVShows.vb" />
+    <Compile Include="Classes\ValueDescriptionPair.vb" />
+    <Compile Include="Forms\Form1\Form1.HomeMovie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1\Form1.CustTv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1\Form1.MovieFieldLocking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1\Form1.MovieFilters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFanartTvArtSelect.Designer.vb">
+      <DependentUpon>frmFanartTvArtSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFanartTvArtSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMovSetAdd.Designer.vb">
+      <DependentUpon>frmMovSetAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMovSetAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMovSets.Designer.vb">
+      <DependentUpon>frmMovSets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMovSets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSeriesList.Designer.vb">
+      <DependentUpon>frmSeriesList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSeriesList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmGenreSelect.Designer.vb">
+      <DependentUpon>frmGenreSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmGenreSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConfigureTableColumns.Designer.vb">
+      <DependentUpon>frmConfigureTableColumns.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConfigureTableColumns.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmImageBrowseOrUrl.Designer.vb">
+      <DependentUpon>frmImageBrowseOrUrl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmImageBrowseOrUrl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTextEdit.Designer.vb">
+      <DependentUpon>frmTextEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTextEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmXbmcExport.Designer.vb">
+      <DependentUpon>frmXbmcExport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmXbmcExport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMovPosterCrop.Designer.vb">
+      <DependentUpon>frmMovPosterCrop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMovPosterCrop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConfigureXBMC_MC_Folders.Designer.vb">
+      <DependentUpon>frmConfigureXBMC_MC_Folders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConfigureXBMC_MC_Folders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBigTvEpisodeText.designer.vb">
+      <DependentUpon>frmBigTvEpisodeText.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBigTvEpisodeText.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1\Form1.Tv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBigMovieText.designer.vb">
+      <DependentUpon>frmBigMovieText.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBigMovieText.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmConfigureMovieFilters.Designer.vb">
+      <DependentUpon>frmConfigureMovieFilters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmConfigureMovieFilters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateDateFix.Designer.vb">
+      <DependentUpon>frmCreateDateFix.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateDateFix.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExceptions.Designer.vb">
+      <DependentUpon>frmExceptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmExceptions.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMoviePlotList.Designer.vb">
+      <DependentUpon>frmMoviePlotList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMoviePlotList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProgressScreen.Designer.vb">
+      <DependentUpon>frmProgressScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProgressScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\MediaCompanion.vb" />
+    <Compile Include="Forms\frmXBMC_Progress.Designer.vb">
+      <DependentUpon>frmXBMC_Progress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmXBMC_Progress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Structures\BasicHomeMovie.vb" />
+    <Compile Include="Structures\FanartList.vb" />
+    <Compile Include="Structures\Genre.vb" />
+    <Compile Include="Structures\Fanarttv.vb" />
+    <Compile Include="Structures\HomeMovieNFO.vb" />
+    <Compile Include="Structures\PossibleShowList.vb" />
+    <Compile Include="Structures\RelativeFileList.vb" />
+    <Compile Include="Structures\TableItems.vb" />
+    <Compile Include="Structures\BatchWizard.vb" />
+    <Compile Include="Structures\RunningThreads.vb" />
+    <Compile Include="Structures\FileDetails.vb" />
+    <Compile Include="Classes\FullMovieDetails.vb" />
+    <Compile Include="Structures\MovieActors.vb" />
+    <Compile Include="Structures\BasicMovieNFO.vb" />
+    <Compile Include="Forms\frmBatchScraper.Designer.vb">
+      <DependentUpon>frmBatchScraper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBatchScraper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCopyProgress.Designer.vb">
+      <DependentUpon>frmCopyProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCopyProgress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMovieAltPosterArt.Designer.vb">
+      <DependentUpon>frmMovieAltPosterArt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMovieAltPosterArt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDialog1.Designer.vb">
+      <DependentUpon>frmDialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\McImage.vb" />
+    <Compile Include="Forms\frmMessageBox.Designer.vb">
+      <DependentUpon>frmMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMovieAltFanart.Designer.vb">
+      <DependentUpon>frmMovieAltFanart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMovieAltFanart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\Scraper.vb" />
+    <Compile Include="Classes\ScraperFunctions.vb" />
+    <Compile Include="Forms\Form1\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOutputLog.Designer.vb">
+      <DependentUpon>frmOutputLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOutputLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\frmPreferences.Designer.vb">
+      <DependentUpon>frmPreferences.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPreferences.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSplashscreen.Designer.vb">
+      <DependentUpon>frmSplashscreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSplashscreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTvBatchWizard.Designer.vb">
+      <DependentUpon>frmTvBatchWizard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTvBatchWizard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTvFanart.Designer.vb">
+      <DependentUpon>frmTvFanart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTvFanart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTvPosters.Designer.vb">
+      <DependentUpon>frmTvPosters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTvPosters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\TvBanners.vb" />
+    <Compile Include="Structures\TVSeries.vb" />
+    <Compile Include="Structures\TvPosterSeason.vb" />
+    <Compile Include="Classes\TvArt.vb" />
+    <Compile Include="Structures\TvShowBatchWizard.vb" />
+    <Compile Include="Classes\WebFileDownloader.vb" />
+    <Compile Include="Classes\WorkingWithNfoFiles.vb" />
+    <Compile Include="Classes\UseXBMCScrapers\CacheManager.vb" />
+    <Compile Include="Classes\UseXBMCScrapers\Exceptions.vb" />
+    <Compile Include="Classes\UseXBMCScrapers\General.vb" />
+    <Compile Include="Classes\UseXBMCScrapers\Scraper.vb" />
+    <Compile Include="Classes\UseXBMCScrapers\ScraperManager.vb" />
+    <Compile Include="Classes\UseXBMCScrapers\ScraperQuery.vb" />
+    <Compile Include="Classes\UseXBMCScrapers\ScraperSettings.vb" />
+    <Compile Include="UserControls\MediaStubs.Designer.vb">
+      <DependentUpon>MediaStubs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MediaStubs.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GraphicInfo.Designer.vb">
+      <DependentUpon>GraphicInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GraphicInfo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProgressAndStatus.Designer.vb">
+      <DependentUpon>ProgressAndStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProgressAndStatus.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TooltipGridViewMovies.Designer.vb">
+      <DependentUpon>TooltipGridViewMovies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TooltipGridViewMovies.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucFanartTvTv.Designer.vb">
+      <DependentUpon>ucFanartTvTv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucFanartTvTv.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucGenPref_XbmcLink.Designer.vb">
+      <DependentUpon>ucGenPref_XbmcLink.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucGenPref_XbmcLink.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucGenPref_Proxy.Designer.vb">
+      <DependentUpon>ucGenPref_Proxy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucGenPref_Proxy.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucMusicVideo.Designer.vb">
+      <DependentUpon>ucMusicVideo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucMusicVideo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucFanartTv.Designer.vb">
+      <DependentUpon>ucFanartTv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucFanartTv.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmFanartTvArtSelect.resx">
+      <DependentUpon>frmFanartTvArtSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMovSetAdd.resx">
+      <DependentUpon>frmMovSetAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMovSets.resx">
+      <DependentUpon>frmMovSets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSeriesList.resx">
+      <DependentUpon>frmSeriesList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmGenreSelect.resx">
+      <DependentUpon>frmGenreSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConfigureTableColumns.resx">
+      <DependentUpon>frmConfigureTableColumns.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmImageBrowseOrUrl.resx">
+      <DependentUpon>frmImageBrowseOrUrl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConfigureXBMC_MC_Folders.resx">
+      <DependentUpon>frmConfigureXBMC_MC_Folders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBigTvEpisodeText.resx">
+      <DependentUpon>frmBigTvEpisodeText.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBatchScraper.resx">
+      <DependentUpon>frmBatchScraper.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBigMovieText.resx">
+      <DependentUpon>frmBigMovieText.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmConfigureMovieFilters.resx">
+      <DependentUpon>frmConfigureMovieFilters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCopyProgress.resx">
+      <DependentUpon>frmCopyProgress.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMovieAltPosterArt.resx">
+      <DependentUpon>frmMovieAltPosterArt.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCreateDateFix.resx">
+      <DependentUpon>frmCreateDateFix.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDialog1.resx">
+      <DependentUpon>frmDialog1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExceptions.resx">
+      <DependentUpon>frmExceptions.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTextEdit.resx">
+      <DependentUpon>frmTextEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmXbmcExport.resx">
+      <DependentUpon>frmXbmcExport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMovPosterCrop.resx">
+      <DependentUpon>frmMovPosterCrop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMoviePlotList.resx">
+      <DependentUpon>frmMoviePlotList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOutputLog.resx">
+      <DependentUpon>frmOutputLog.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMovieAltFanart.resx">
+      <DependentUpon>frmMovieAltFanart.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProgressScreen.resx">
+      <DependentUpon>frmProgressScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmXBMC_Progress.resx">
+      <DependentUpon>frmXBMC_Progress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPreferences.resx">
+      <DependentUpon>frmPreferences.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSplashscreen.resx">
+      <DependentUpon>frmSplashscreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTvBatchWizard.resx">
+      <DependentUpon>frmTvBatchWizard.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTvFanart.resx">
+      <DependentUpon>frmTvFanart.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTvPosters.resx">
+      <DependentUpon>frmTvPosters.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MediaStubs.resx">
+      <DependentUpon>MediaStubs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GraphicInfo.resx">
+      <DependentUpon>GraphicInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProgressAndStatus.resx">
+      <DependentUpon>ProgressAndStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TooltipGridViewMovies.resx">
+      <DependentUpon>TooltipGridViewMovies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucFanartTvTv.resx">
+      <DependentUpon>ucFanartTvTv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucGenPref_Proxy.resx">
+      <DependentUpon>ucGenPref_Proxy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucGenPref_XbmcLink.resx">
+      <DependentUpon>ucGenPref_XbmcLink.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucMusicVideo.resx">
+      <DependentUpon>ucMusicVideo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucFanartTv.resx">
+      <DependentUpon>ucFanartTv.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Assets\AlphaFS.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Assets\ffmpeg source.txt" />
+    <Content Include="Media Companion.exe.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Assets\scrapers\metadata.musicvideos.imvdb-master\LICENSE">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\scrapers\metadata.musicvideos.imvdb-master\README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\scrapers\xbmc.metadata\scraper.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Assets\LangList.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.theaudiodb.com\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.theaudiodb.com\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.theaudiodb.com\tadb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.imvdb-master\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.imvdb-master\changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.imvdb-master\fanart.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.imvdb-master\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.imvdb-master\imvdb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.theaudiodb.com\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.theaudiodb.com\changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.theaudiodb.com\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.theaudiodb.com\resources\settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.musicvideos.theaudiodb.com\tadb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\BasicMoviewPathCSVoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\CopyMoviesInFolders.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\MoviesSetAndTitle.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="media_companion.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="TvShow.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\basicmovienfo.datasource" />
+    <None Include="My Project\DataSources\basicmovienfo1.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Classes\UseXBMCScrapers\ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new2.png" />
+    <AdditionalFiles Include="Assets\mcEventLog.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+    <Content Include="Assets\scrapers\metadata.themoviedb.org\Notes for MC.txt" />
+    <Content Include="Assets\scrapers\metadata.tvdb.com\Notes for MC.txt" />
+    <Content Include="Classes\genre.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\apple-touch-icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\Movie Mobile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mediainfo-rar.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\arrow-roll Back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\arrow-roll Forward.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\chimes.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\correct_manual24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\default_tvbanner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\default_tvfanart.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\default_tvposter.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\error24.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\lockwatched.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\mc-xbmc-link.JPG" />
+    <None Include="Resources\remove64.png" />
+    <Content Include="Resources\refreshMovSet64.png" />
+    <Content Include="Resources\moviesetadd64.png" />
+    <Content Include="Resources\missing24.png" />
+    <Content Include="Resources\TheMovieDB.png" />
+    <Content Include="Resources\TMDB_Icon2.png" />
+    <Content Include="Resources\video_flags\media_audio_atmos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_dts_x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_atmos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_dts_x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_avc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\sublang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\lang_notdefault.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\lang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\aspect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\long_blank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_aac.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_ac3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_aif.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_aifc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_aiff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_alac.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_ape.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_avc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_cdda.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_dca.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_dts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_dtshd_hra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_dtshd_ma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_dts_es.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_eac3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_flac.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_mp1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_mp2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_mp3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_ogg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_pcm_bluray.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_truehd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_vorbis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_wav.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_wavpack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_wma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_wmapro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_notdefault_wmav2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_pcm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_notdefault_8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_resolution_2160.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_hevc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_mp4v.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_mpeg2video.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_wmv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_wmv2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_special_3D.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\watched.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="undvd.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="unrar.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\correct.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\incorrect.png" />
+    <Content Include="Resources\mc-xbmc-link.ico" />
+    <None Include="Assets\Newtonsoft.Json.Net20.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="html_templates\BasicMovieCSVoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\TMDB_Icon.png" />
+    <Content Include="Resources\mc-xbmc-link16.ico" />
+    <Content Include="Resources\TVDB_sm.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_aspect_1.33.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_aspect_1.66.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_aspect_1.78.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_aspect_1.85.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_aspect_2.20.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_aspect_2.35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_aac.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_ac3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_aif.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_aifc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_aiff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_alac.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_ape.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_avc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_cdda.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_dca.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_dts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_dtshd_hra.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_dtshd_ma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_eac3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_flac.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_mp1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_mp2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_mp3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_ogg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_pcm_bluray.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_truehd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_vorbis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_wav.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_wavpack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_wma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_wmapro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_audio_wmav2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_channels_8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_avc1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_bluray.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_divx.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_dvd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_flv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_h264.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_hddvd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_hdmv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_mpeg-4visual.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_mpeg1codec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_mpeg2codec.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_mpegvideo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_tv.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_vc-1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_vhs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_vp8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_wvc1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_codec_xvid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_mpaa_nc17.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_mpaa_notrated.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_mpaa_pg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_mpaa_pg13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_mpaa_restricted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_resolution_1080.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_resolution_480.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_resolution_540.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_resolution_576.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\media_resolution_720.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\video_flags\mpaa_general.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\RefreshAll.png" />
+    <Content Include="Assets\ffmpeg.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Untitled-1.gif" />
+    <None Include="Resources\stars2.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Untitled-1.png" />
+    <Content Include="Assets\MediaCompanion.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\pthreadGC2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Assets\RestSharp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Assets\scrapers\metadata.mc.hdtrailers.net\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.mc.hdtrailers.net\hdtrailers.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\filelist.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image001.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image002.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image003.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image005.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image006.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image007.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image008.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image009.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\TakeOwnership_files\image010.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Assets\wfcl_MC.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Classes\DefaultCertificateMappings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Classes\tmdb_languages.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\CSVoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\XMLoutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MediaInfo.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.hdtrailers.net\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.hdtrailers.net\hdtrailers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.imdb.com\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.imdb.com\changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.imdb.com\imdb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.impa.com\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.impa.com\impa.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.movieposterdb.com\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.movieposterdb.com\movieposterdb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.themoviedb.org\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.common.themoviedb.org\tmdb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.imdb.com\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.imdb.com\changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.imdb.com\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.imdb.com\imdb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.imdb.com\resources\settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.themoviedb.org\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.themoviedb.org\changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.themoviedb.org\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.themoviedb.org\resources\settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.themoviedb.org\tmdb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.tvdb.com\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.tvdb.com\changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.tvdb.com\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.tvdb.com\resources\settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\metadata.tvdb.com\tvdb.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\xbmc.core\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\scrapers\xbmc.metadata\addon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Classes\UseXBMCScrapers\readme.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\Simple with Outline.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\Basic Movie List HTML.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\1Export Template Guide.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\Movie Card 2up Filter.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\Movie Card 2up.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\Movie Card.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\Simple with Plot.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\Table List.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\tv_adv_template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\tv_basic_template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="html_templates\tv_missing_episode_list.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\1356729777_video.png" />
+    <None Include="Resources\1356729911_page_white_text.png" />
+    <Content Include="Assets\Resolutions.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\blank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\clock-icon.png" />
+    <None Include="Resources\Clap.png" />
+    <Content Include="Resources\default_actor.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\default_banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\default_fanart.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\default_offline.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\default_poster.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\dot_gray.png" />
+    <Content Include="Resources\edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\imdb.png" />
+    <None Include="Resources\folder_closed.png" />
+    <None Include="Resources\new.png" />
+    <Content Include="Resources\missing.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\prefrodo_banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\qmark.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="class_fanart_tv\class_fanart_tv.vbproj">
+      <Project>{fab3d04d-396a-4252-89d1-f5d351b4faca}</Project>
+      <Name>class_fanart_tv</Name>
+    </ProjectReference>
+    <ProjectReference Include="class_mpdb_thumbs\class_mpdb_thumbs.vbproj">
+      <Project>{c81962cc-64c7-4677-b87c-ef20d3b88da2}</Project>
+      <Name>class_mpdb_thumbs</Name>
+    </ProjectReference>
+    <ProjectReference Include="Common\Common.vbproj">
+      <Project>{A3624371-E7E4-4E55-8E64-4460E758D39E}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="NfoLibrary\NfoLibrary.vbproj">
+      <Project>{5433F636-07CC-4E16-A29C-A705F4E98A7F}</Project>
+      <Name>NfoLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="ProtoXML\ProtoXML.vbproj">
+      <Project>{2C089B91-EEEE-45EF-9C43-E1A703CA3287}</Project>
+      <Name>ProtoXML</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scraper dll sources\imdb_thumbs\imdb_thumbs\imdb_thumbs.vbproj">
+      <Project>{13cbe750-a272-4f39-90d3-2b4e6e1fa04e}</Project>
+      <Name>imdb_thumbs</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scraper dll sources\IMPA\IMPA.vbproj">
+      <Project>{0ef49671-9c5e-40fe-a469-86abba142bbe}</Project>
+      <Name>IMPA</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scraper dll sources\TVDB V2\TheTVDBLibV2\TheTVDBLibV2.csproj">
+      <Project>{cfe00a44-aeaa-4cab-a448-b397f8b01bc5}</Project>
+      <Name>TheTVDBLibV2</Name>
+    </ProjectReference>
+    <ProjectReference Include="Scraper dll sources\YouTubeUrlGrabber\YouTubeUrlGrabber.csproj">
+      <Project>{1597c9b5-c70d-404d-9cc2-2761d43278c6}</Project>
+      <Name>YouTubeUrlGrabber</Name>
+    </ProjectReference>
+    <ProjectReference Include="Tasks\Tasks.vbproj">
+      <Project>{34E2C884-046F-4E79-9FCD-D67DC9592489}</Project>
+      <Name>Tasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="TvdbScrapper\TvdbScrapper.vbproj">
+      <Project>{5B3BD48A-7DEE-4FF3-B7E8-8D41B83E25D3}</Project>
+      <Name>TvdbScrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utilites\Utilites.vbproj">
+      <Project>{0AF142A6-217A-4F1D-A67E-4A2F803E9B4D}</Project>
+      <Name>Utilites</Name>
+    </ProjectReference>
+    <ProjectReference Include="WatTmdb\WatTmdb.csproj">
+      <Project>{efc11645-fab4-4c30-a498-29f5ecdf77e8}</Project>
+      <Name>WatTmdb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="Modules\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>If $(PlatformName)==x64 (
+xcopy /y  "$(ProjectDir)x64 dll's\mediainfo.dll" "$(ProjectDir)$(OutDir)"
+xcopy /y  "$(ProjectDir)x64 dll's\unrar.exe" "$(ProjectDir)$(OutDir)"
+xcopy /y  "$(ProjectDir)x64 dll's\mediainfo-rar.exe" "$(ProjectDir)$(OutDir)"
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

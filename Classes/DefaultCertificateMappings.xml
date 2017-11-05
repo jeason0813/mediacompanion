@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Usage
+  =====
+  1. Make your changes in CertificateMappings.xml, not DefaultCertificateMappings.xml.
+  2. Add\remove\edit entries as you see fit to manage your certificates.
+  3. Append a '*' to the end of the find string to match all trailing characters.
+
+  Notes
+  =====
+  1. Add present these mappings only affect the Certificate movie filter list, i.e. changes ARE NOT written back to the NFO files.
+  2. The find text isn't case sensitive.
+  
+  Any corrections \ ommissions can be by incorporated into MC by raising a new Issue here: https://mediacompanion.codeplex.com/workitem/list/basic
+-->
+
+<Certificates>
+  <Certificate find="6" replace=" 8" />
+  <Certificate find="9" replace=" 8" />
+  <Certificate find="U" replace=" 8" />
+  <Certificate find="Rated U" replace=" 8" />
+  <Certificate find="Rated 6" replace=" 8" />
+
+  <Certificate find="TV-G" replace="12" />
+  <Certificate find="G" replace="12" />
+  <Certificate find="11" replace="12" />
+  <Certificate find="12A" replace="12" />
+  <Certificate find="13" replace="12" />
+  <Certificate find="A" replace="12" />
+  <Certificate find="AA" replace="12" />
+  <Certificate find="AL" replace="12" />
+  <Certificate find="All" replace="12" />
+  <Certificate find="Approved" replace="12" />
+  <Certificate find="K-11" replace="12" />
+  <Certificate find="K-12" replace="12" />
+  <Certificate find="K-13" replace="12" />
+  <Certificate find="K-3" replace="12" />
+  <Certificate find="Livre" replace="12" />
+  <Certificate find="M" replace="12" />
+  <Certificate find="M/12" replace="12" />
+  <Certificate find="MA" replace="12" />
+  <Certificate find="o.Al." replace="12" />
+  <Certificate find="PG*" replace="12" />
+  <Certificate find="Rated PG*" replace="12" />
+  <Certificate find="TV-MA" replace="12" />
+  <Certificate find="TV-PG" replace="12" />
+  <Certificate find="E" replace="12" />
+  <Certificate find="Rated G" replace="12" />
+  <Certificate find="R-13" replace="12" />
+  <Certificate find="N: Rated PG-13*" replace="12" />
+  <Certificate find="Rated 12*" replace="12" />
+  <Certificate find="Rated K-12" replace="12" />
+  <Certificate find="Rated A*" replace="12" />
+  <Certificate find="Rated TV-PG" replace="12" />
+
+
+  <Certificate find="TV-14" replace="15" />
+  <Certificate find="14" replace="15" />
+  <Certificate find="15A" replace="15" />
+  <Certificate find="Rated 15A" replace="15" />
+  <Certificate find="16" replace="15" />
+  <Certificate find="MA15" replace="15" />
+  <Certificate find="MA15+" replace="15" />
+  <Certificate find="NC-16" replace="15" />
+  <Certificate find="Rated R" replace="15" />
+  <Certificate find="Rated 15" replace="15" />
+  <Certificate find="Rated 16" replace="15" />
+  <Certificate find="Rated AA" replace="15" />
+  <Certificate find="R-16" replace="15" />
+  <Certificate find="R16" replace="15" />
+  <Certificate find="Rated NC16" replace="15" />
+  <Certificate find="Rated NC-16" replace="15" />
+  <Certificate find="Rated MA15+" replace="15" />
+  <Certificate find="Rated M" replace="15" />
+  <Certificate find="Rated E" replace="15" />
+  <Certificate find="Rated MA" replace="15" />
+
+
+  <Certificate find="K-18" replace="18" />
+  <Certificate find="M18" replace="18" />
+  <Certificate find="Rated M18" replace="18" />
+  <Certificate find="Rated 18" replace="18" />
+  <Certificate find="R" replace="18" />
+  <Certificate find="R18" replace="18" />
+  <Certificate find="Rated NC-17*" replace="18" />
+  <Certificate find="X" replace="18" />
+  <Certificate find="Rated AO" replace="18" />
+  <Certificate find="Rated X" replace="18" />
+  <Certificate find="Rated R *" replace="18" />
+  <Certificate find="Rated  R *" replace="18" />
+  <Certificate find="VM18" replace="18" />
+
+  <Certificate find="Not Rated" replace="Unrated" />
+
+  <Certificate find="Refused Classification" replace="Refused" />
+
+</Certificates>
+

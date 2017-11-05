@@ -1,0 +1,24 @@
+<title>XML Output</title>
+<<MC HTML Page>>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<movielist>
+<<media_item>>
+	<movie>
+		<imdbid><<imdb_id>></imdbid>
+		<title><<title>></title>
+		<thumb><<createimage:175>></thumb>
+		<image><<createimage:350>></image>
+		<releasedate><<releasedate>></releasedate>
+		<format><<nfo:file:video:container>></format>
+		<width><<nfo:file:video:width>></width>
+		<height><<nfo:file:video:height>></height>
+		<rating><<rating>></rating>
+		<runtime><<runtime>></runtime>
+		<genre><<moviegenre>></genre>
+		<actors><<stars>></actors>
+		<outline><<outline>></outline>
+		<plot><<fullplot>></plot>
+	</movie>
+<</media_item>>
+</movielist>
+<</MC HTML Page>>

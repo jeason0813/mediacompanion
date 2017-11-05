@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "imdb", "imdb\imdb.vbproj", "{D15F2346-E4E6-4344-B435-3C1CB7CA697E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D15F2346-E4E6-4344-B435-3C1CB7CA697E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15F2346-E4E6-4344-B435-3C1CB7CA697E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15F2346-E4E6-4344-B435-3C1CB7CA697E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15F2346-E4E6-4344-B435-3C1CB7CA697E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

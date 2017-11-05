@@ -1,0 +1,42 @@
+<title>Movie Card Easy Print</title>
+<<MC HTML Page>>
+<<header>>
+<meta  content="text/html;  charset=UTF-8"  http-equiv="Content-Type">
+<link href="moviecard.css" rel="stylesheet" type="text/css">
+<</header>>
+<<body>>
+<table align="center" border="0" width="800" bgcolor="#e0e0e0" cellspacing="0" cellpadding="0">
+<tr ><td rowspan="7" valign="top"><img src="<<smallimage>>" width="150" height="200"  hspace="10" 
+border="1"></td><td align="left" colspan ="4" width="600" height="1" bgcolor="#000000"><font color="#ffffff" 
+class="headingfont" ><b>&nbsp;&nbsp;<<title>></b></font></td></tr>
+<tr height="1" ><td colspan="4" width ="100%" ><hr></td></tr>
+<tr class="bigfont" height="1"><td width="15%">&nbsp;&nbsp;&nbsp;&nbsp;Year:</td><td 
+width="35%"><b><<movieyear>></b></td><td width="15%">Director:</td><td><b><<director>></b></td></tr>
+<tr class="bigfont" 
+height="1"><td>&nbsp;&nbsp;&nbsp;&nbsp;Genre:</td><td><b><<moviegenre>></b></td><td>Writer:</td><td><b><<writer>></b></td></tr>
+<tr class="bigfont" 
+height="1"><td>&nbsp;&nbsp;&nbsp;&nbsp;Rating:</td><td><b><<rating>></b></td><td>Duration:</td><td><b><<runtime>></b></td></tr>
+<tr><td colspan="4" width ="100%"><hr></td></tr>
+<tr class="bigfont" valign="top"><td colspan="4" width ="100%"><b>Description:</b><br><font 
+class="smallfont"><<outline>></td></tr>
+</table>
+<center><hr width="800"></center>
+<</body>>
+<<footer>><</footer>>
+<</MC HTML Page>>
+
+<<css>>
+<filename>moviecard.css</filename>
+@charset "utf-8";
+.smallfont {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 14px;
+}
+.bigfont {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 16px;
+}
+.headingfont {
+   font-size: 26px;
+}
+<</css>>

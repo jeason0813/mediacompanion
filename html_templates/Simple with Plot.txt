@@ -1,0 +1,15 @@
+<title>Simple With Plot (HTML)</title>
+<<MC HTML Page>>
+<<header>>
+<meta  content="text/html;  charset=UTF-8"  http-equiv="Content-Type">
+<h1 align="center"><font size="6"><b>Media Companion for XBMC\Kodi</b></font></h1>
+<h2 align="center"><font size="5"><b>HTML Output</b></font></h2>
+<h3 align="center"><<moviecount>> movies</h3>
+<p align="center">&nbsp;</p>
+<</header>>
+<<body>>
+<p align="center"><b><a href="<<imdb_url>>"><<movietitleandyear>></a></b></p>
+<p align="center"><<fullplot>></p><hr/>
+<</body>>
+<<footer>><</footer>>
+<</MC HTML Page>>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Resolutions>
+	<Resolution name="XGA"          aspectRatio="4:3"   width="1024" height="768" />
+	<Resolution name="XGA+"         aspectRatio="4:3"   width="1152" height="864" />
+	<Resolution name="WXGA 720"     aspectRatio="16:9"  width="1280" height="720" />
+	<Resolution name="WXGA 768"     aspectRatio="5:3"   width="1280" height="768" />
+	<Resolution name="WXGA 800"     aspectRatio="16:10" width="1280" height="800" />
+	<Resolution name="SXGA– (UVGA)" aspectRatio="4:3"   width="1280" height="960" />
+	<Resolution name="SXGA"         aspectRatio="5:4"   width="1280" height="1024"/>
+	<Resolution name="HD 1360"      aspectRatio="~16:9" width="1360" height="768" />
+	<Resolution name="HD 1366"      aspectRatio="~16:9" width="1366" height="768" />
+	<Resolution name="SXGA+"        aspectRatio="4:3"   width="1400" height="1050"/>
+	<Resolution name="WXGA+"        aspectRatio="16:10" width="1440" height="900" />
+	<Resolution name="HD+"          aspectRatio="16:9"  width="1600" height="900" />
+	<Resolution name="UXGA"         aspectRatio="4:3"   width="1600" height="1200"/>
+	<Resolution name="WSXGA+"       aspectRatio="16:10" width="1680" height="1050"/>
+	<Resolution name="FHD"          aspectRatio="16:9"  width="1920" height="1080"/>
+	<Resolution name="WUXGA"        aspectRatio="16:10" width="1920" height="1200"/>
+	<Resolution name="QWXGA"        aspectRatio="16:9"  width="2048" height="1152"/>
+	<Resolution name="WQHD"         aspectRatio="6:9"   width="2560" height="1440"/>
+	<Resolution name="WQXGA"        aspectRatio="16:10" width="2560" height="1600"/>
+	<Resolution name="QWXGA+"       aspectRatio="16:10" width="2048" height="1280"/>
+	<Resolution name="Custom"       aspectRatio="4:6"   width="1000" height="1500"/>
+</Resolutions>
+

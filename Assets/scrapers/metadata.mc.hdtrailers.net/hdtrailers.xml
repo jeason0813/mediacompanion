@@ -1,0 +1,151 @@
+﻿<scraperfunctions>
+	<GetHDTrailersnet480p dest="3">
+		<RegExp input="$$6" output="&lt;details&gt;&lt;url function=&quot;Parse480pTrailer&quot;&gt;http://www.hd-trailers.net/movie/\1&lt;/url&gt;&lt;/details&gt;" dest="3">
+			<RegExp input="$$1" output="\1" dest="6">
+				<expression noclean="1" fixchars="1" trim="1" encode="1">(.*)</expression>
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</GetHDTrailersnet480p>
+	<GetHDTrailersnet720p dest="3">
+		<RegExp input="$$6" output="&lt;details&gt;&lt;url function=&quot;Parse720pTrailer&quot;&gt;http://www.hd-trailers.net/movie/\1&lt;/url&gt;&lt;/details&gt;" dest="3">
+			<RegExp input="$$1" output="\1" dest="6">
+				<expression noclean="1" fixchars="1" trim="1" encode="1">(.*)</expression>
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</GetHDTrailersnet720p>
+	<GetHDTrailersnet1080p dest="3">
+		<RegExp input="$$6" output="&lt;details&gt;&lt;url function=&quot;Parse1080pTrailer&quot;&gt;http://www.hd-trailers.net/movie/\1&lt;/url&gt;&lt;/details&gt;" dest="3">
+			<RegExp input="$$1" output="\1" dest="6">
+				<expression noclean="1" fixchars="1" trim="1" encode="1">(.*)</expression>
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</GetHDTrailersnet1080p>
+	<Parse480pTrailer dest="5">
+		<RegExp input="$$6" output="&lt;details&gt;&lt;trailer&gt;\1&lt;/trailer&gt;&lt;/details&gt;" dest="5">
+			<!--
+				Fetch 480p trailer links, each subsequest available scrape overwrites it's predecessor, so put your preferred source last to make it your 1st choice
+			-->
+			<RegExp input="$$1" output="http://videos.hd-trailers.net\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://videos.hd-trailers.net(.{10,200}?)" rel="lightbox\[res480p</expression>
+			</RegExp>
+
+			<!--	YouTube scraping is commented out as the trailer link redirects to the containing webpage
+			
+			RegExp input="$$1" output="http://www.youtube\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://www.youtube(.{10,200}?)" rel="lightbox\[res480p</expression>
+			</RegExp-->
+
+			<RegExp input="$$1" output="http://playlist.yahoo.com/makeplaylist.dll?sdm=web&amp;pt=rd&amp;sid=\1" dest="6">
+				<expression noclean="1">"&gt;Trailer&lt;/span&gt;&lt;/td&gt;.*?sid=(\d*)" rel="lightbox\[res480p</expression>
+			</RegExp>
+
+			<RegExp input="$$1" output="http://pdl.stream\1.mov" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://pdl.stream(.{10,200}?).mov" rel="lightbox\[res480p</expression>
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</Parse480pTrailer>
+	<Parse720pTrailer dest="5">
+		<RegExp input="$$6" output="&lt;details&gt;&lt;trailer&gt;\1&lt;/trailer&gt;&lt;/details&gt;" dest="5">
+			<!--
+				Fallback to 480p trailer links if no 720p links are available - Each subsequest available scrape overwrites it's predecessor, so put your preferred source last to make it your 1st choice
+			-->
+			<RegExp input="$$1" output="http://videos.hd-trailers.net\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://videos.hd-trailers.net(.{10,200}?)" rel="lightbox\[res480p</expression>
+			</RegExp>
+
+			<!--RegExp input="$$1" output="http://www.youtube\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://www.youtube(.{10,200}?)" rel="lightbox\[res480p</expression>
+			</RegExp-->
+
+			<RegExp input="$$1" output="http://playlist.yahoo.com/makeplaylist.dll?sdm=web&amp;pt=rd&amp;sid=\1" dest="6">
+				<expression noclean="1">"&gt;Trailer&lt;/span&gt;&lt;/td&gt;.*?sid=(\d*)" rel="lightbox\[res480p</expression>
+			</RegExp>
+
+			<RegExp input="$$1" output="http://pdl.stream\1.mov" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://pdl.stream(.{10,200}?).mov" rel="lightbox\[res480p</expression>
+			</RegExp>
+			<!--
+				Fetch 720p trailer links
+			-->
+			<RegExp input="$$1" output="http://videos.hd-trailers.net\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://videos.hd-trailers.net(.{10,200}?)" rel="lightbox\[res720p</expression>
+			</RegExp>
+
+			<!--RegExp input="$$1" output="http://www.youtube\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://www.youtube(.{10,200}?)" rel="lightbox\[res720p</expression>
+			</RegExp-->
+
+			<RegExp input="$$1" output="http://playlist.yahoo.com/makeplaylist.dll?sdm=web&amp;pt=rd&amp;sid=\1" dest="6">
+				<expression noclean="1">"&gt;Trailer&lt;/span&gt;&lt;/td&gt;.*?sid=(\d*)" rel="lightbox\[res720p</expression>
+			</RegExp>
+
+			<RegExp input="$$1" output="http://pdl.stream\1.mov" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://pdl.stream(.{10,200}?).mov" rel="lightbox\[res720p</expression>
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</Parse720pTrailer>
+	<Parse1080pTrailer dest="5">
+		<RegExp input="$$6" output="&lt;details&gt;&lt;trailer&gt;\1&lt;/trailer&gt;&lt;/details&gt;" dest="5">
+			<!--
+				Fallback to 480p trailer links if no 720p links are not available - Each subsequest available scrape overwrites it's predecessor, so put your preferred source last to make it your 1st choice
+			-->
+			<RegExp input="$$1" output="http://videos.hd-trailers.net\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://videos.hd-trailers.net(.{10,200}?)" rel="lightbox\[res480p</expression>
+			</RegExp>
+
+			<!--RegExp input="$$1" output="http://www.youtube\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://www.youtube(.{10,200}?)" rel="lightbox\[res480p</expression>
+			</RegExp-->
+
+			<RegExp input="$$1" output="http://playlist.yahoo.com/makeplaylist.dll?sdm=web&amp;pt=rd&amp;sid=\1" dest="6">
+				<expression noclean="1">"&gt;Trailer&lt;/span&gt;&lt;/td&gt;.*?sid=(\d*)" rel="lightbox\[res480p</expression>
+			</RegExp>
+
+			<RegExp input="$$1" output="http://pdl.stream\1.mov" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://pdl.stream(.{10,200}?).mov" rel="lightbox\[res480p</expression>
+			</RegExp>
+			<!--
+				Fallback to 720p trailer links if no 1080p links are available
+			-->
+			<RegExp input="$$1" output="http://videos.hd-trailers.net\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://videos.hd-trailers.net(.{10,200}?)" rel="lightbox\[res720p</expression>
+			</RegExp>
+
+			<!--RegExp input="$$1" output="http://www.youtube\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://www.youtube(.{10,200}?)" rel="lightbox\[res720p</expression>
+			</RegExp-->
+
+			<RegExp input="$$1" output="http://playlist.yahoo.com/makeplaylist.dll?sdm=web&amp;pt=rd&amp;sid=\1" dest="6">
+				<expression noclean="1">"&gt;Trailer&lt;/span&gt;&lt;/td&gt;.*?sid=(\d*)" rel="lightbox\[res720p</expression>
+			</RegExp>
+
+			<RegExp input="$$1" output="http://pdl.stream\1.mov" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://pdl.stream(.{10,200}?).mov" rel="lightbox\[res720p</expression>
+			</RegExp>
+			<!--
+				Fetch 1080p trailer links
+			-->
+			<RegExp input="$$1" output="http://videos.hd-trailers.net\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://videos.hd-trailers.net(.{10,200}?)" rel="lightbox\[res1080p</expression>
+			</RegExp>
+
+			<!--RegExp input="$$1" output="http://www.youtube\1" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://www.youtube(.{10,200}?)" rel="lightbox\[res1080p</expression>
+			</RegExp-->
+
+			<RegExp input="$$1" output="http://playlist.yahoo.com/makeplaylist.dll?sdm=web&amp;pt=rd&amp;sid=\1" dest="6">
+				<expression noclean="1">"&gt;Trailer&lt;/span&gt;&lt;/td&gt;.*?sid=(\d*)" rel="lightbox\[res1080p</expression>
+			</RegExp>
+
+			<RegExp input="$$1" output="http://pdl.stream\1.mov" dest="6">
+				<expression noclean="1">&lt;td class="bottomTableResolution"&gt;&lt;a href="http://pdl.stream(.{10,200}?).mov" rel="lightbox\[res1080p</expression>
+			</RegExp>
+			<expression noclean="1" />
+		</RegExp>
+	</Parse1080pTrailer>
+</scraperfunctions>

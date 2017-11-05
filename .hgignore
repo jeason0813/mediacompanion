@@ -1,0 +1,39 @@
+# use glob syntax
+syntax: glob
+
+*.suo
+*.user
+*.obj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+[Bb]in
+obj/
+_ReSharp*/
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+*.resharper
+*.tlog
+bin/Debug/Settings/*.*
+bin/Release/Settings/*.*
+bin/Debug/Media Companion.exe
+bin/Release/Media Companion.exe
+*.orig
+Assets/Media Companion icon5.ico

@@ -1,0 +1,25 @@
+<title>Basic TV List</title>
+<<MC TV HTML Page>>
+<<header>>
+<meta  content="text/html;  charset=UTF-8"  http-equiv="Content-Type">
+<title>Basic TV List - <<show_count>> Shows</title>
+<</header>>
+<<body>>
+<h1 align="center"><font size="6"><b>Media Companion for XBMC\Kodi</b></font></h1>
+<h2 align="center"><font size="5"><b>HTML Output</b></font></h2>
+<<media_item>>
+<font size="6"><<show_title>></font>&nbsp;&nbsp;<font size="1"><a href="<<show_imdburl>>">IMDB</a> <a href="<<show_tvdburl>>">TheTVDB</a></font>
+<ul>
+<<season:all>>	<li>
+<font size="+1"><b>Season <<seas_number>></b></font>
+		<ul>
+<<episode:all>>			<li><<ep_number:pad>>. <<ep_title>></li>
+<</episode>>
+		</ul>
+	</li>
+<</season>>
+</ul>
+<</media_item>>
+<</body>>
+<<footer>><</footer>>
+<</MC TV HTML Page>>
